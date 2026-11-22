@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soft Cravings — Premium Bakery &amp; Small Chops</title>
+<meta name="description" content="Soft Cravings: celebration cakes, pastries, small chops and cupcakes. Every bite, a little happiness. Order on WhatsApp.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#FFF3E6;--bg2:#F8E5D5;--tx:#38251F;--ac:#D94B24;--bl:#EFC5BD;--card:#fff;--mut:#8a6f63;--sh:0 6px 20px rgba(56,37,31,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151515;--bg2:#222;--tx:#f6e9de;--card:#1f1f1f;--mut:#b49c8e;--sh:0 6px 20px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151515;--bg2:#222;--tx:#f6e9de;--card:#1f1f1f;--mut:#b49c8e;--sh:0 6px 20px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 Poppins,system-ui,sans-serif;padding-bottom:84px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0;line-height:1.2}
+button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}
+.wrap{max-width:1100px;margin:auto;padding:0 16px}
+.card{background:var(--card);border-radius:20px;box-shadow:var(--sh)}
+.btn{background:var(--ac);color:#fff;padding:12px 22px;border-radius:99px;font-weight:600;display:inline-flex;gap:8px;align-items:center}
+.btn.alt{background:var(--bl);color:#38251F}
+.ic{width:44px;height:44px;border-radius:14px;background:var(--card);box-shadow:var(--sh);display:grid;place-items:center;position:relative;font-size:18px}
+.bd{position:absolute;top:-5px;right:-5px;background:var(--ac);color:#fff;border-radius:99px;font-size:11px;min-width:18px;height:18px;display:grid;place-items:center}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.top{display:flex;align-items:center;gap:10px;padding:12px 0}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;letter-spacing:.06em;flex:1;color:var(--ac)}
+.logo{display:block}.logo img{height:40px;width:auto;max-width:100%;display:block}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1)}}:root[data-theme="dark"] .logo img{filter:invert(1)}.search{position:relative}.sg{position:absolute;top:52px;left:0;right:0;background:var(--card);border-radius:20px;box-shadow:0 12px 30px rgba(0,0,0,.25);z-index:40;max-height:60vh;overflow:auto;padding:12px;display:none}.sg.on{display:block}.sg .sm{margin:6px 0}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}.chip{background:var(--bg2);padding:8px 14px;border-radius:99px;font-size:13px}.chip:hover,.it:hover{background:var(--bl);color:#38251F}.it{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:8px;border-radius:14px}.it .t{width:46px;height:46px;border-radius:12px;background:center/cover;flex:none}.ceo{display:flex;gap:16px;align-items:center;margin-bottom:16px}.ceo img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:4px solid var(--bl)}
+.desk{display:none;gap:18px}.desk a{color:var(--tx);text-decoration:none;font-weight:500}
+.search{display:flex;gap:10px;padding-bottom:12px}.search input{flex:1;border:0;border-radius:99px;padding:13px 18px;background:var(--card);box-shadow:var(--sh);color:var(--tx);font:inherit}
+.hello{padding:6px 0 14px}.hello h1{font-size:30px}.hello p{color:var(--mut);margin:6px 0 0}
+.hero{position:relative;border-radius:26px;overflow:hidden;height:260px;background:#3a1a10}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s;background-size:cover;background-position:center}
+.slide.on{opacity:1}.slide::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,15,8,.85),rgba(40,15,8,.1) 75%)}
+.slide div{position:relative;color:#fff;padding:26px;max-width:75%}.slide h2{font-size:28px;margin:8px 0}
+.tag{background:var(--ac);font-size:11px;padding:3px 10px;border-radius:99px;letter-spacing:.08em}
+.dots{position:absolute;bottom:12px;left:26px;display:flex;gap:6px}.dots i{width:7px;height:7px;border-radius:9px;background:#fff6;transition:.3s}.dots i.on{width:22px;background:var(--ac)}
+.cats{display:flex;gap:14px;overflow-x:auto;padding:18px 0 6px;scrollbar-width:none}
+.cat{flex:none;width:76px;text-align:center;font-size:12px}.cat span{display:block;width:70px;height:70px;border-radius:50%;margin:0 auto 6px;background:var(--card) center/cover;box-shadow:var(--sh);border:3px solid transparent;font-size:28px;line-height:64px}
+.cat.on span{border-color:var(--ac)}.cat.on{color:var(--ac);font-weight:600}
+.sec{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px}.sec h2{font-size:22px}.sec a{color:var(--ac);text-decoration:none;font-weight:500}
+.row{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:none}.row .pc{flex:none;width:170px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pc{overflow:hidden;position:relative;text-align:left;display:block}.pc .im{height:130px;background:center/cover}.pc .b{padding:10px 12px 12px}
+.pc h3{font:600 14px Poppins}.pc p{font-size:12px;color:var(--mut);margin:2px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc .f{display:flex;justify-content:space-between;align-items:center;font-weight:600}.pc .add{width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;font-size:20px}
+.pc .hb{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;background:#fffd;color:#D94B24}
+.pc .lb{position:absolute;top:8px;left:8px;background:#B3261E;color:#fff;font-size:10px;padding:2px 9px;border-radius:99px}
+.promo{border-radius:24px;background:linear-gradient(120deg,var(--bl),var(--bg2));padding:24px;display:flex;align-items:center;gap:16px;overflow:hidden;color:#38251F}
+.promo>div{flex:1}.promo h2{font-size:24px;margin:4px 0 12px}.promo .pi{width:120px;height:120px;border-radius:50%;background:center/cover;flex:none;border:4px solid #fff}
+.notice{background:var(--bg2);border-radius:16px;padding:12px 16px;margin:10px 0;font-size:14px}
+nav.bot{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-radius:28px;box-shadow:0 8px 30px rgba(0,0,0,.2);display:flex;justify-content:space-around;padding:8px 6px;z-index:25;max-width:560px;margin:auto}
+nav.bot a{flex:1;text-align:center;font-size:11px;color:var(--mut);text-decoration:none;padding:4px}nav.bot a b{display:block;font-size:20px;font-weight:400}
+nav.bot a.on{color:var(--ac);font-weight:600}nav.bot a.mid b{background:var(--ac);color:#fff;border-radius:50%;width:48px;height:48px;line-height:48px;margin:-24px auto 2px;box-shadow:0 6px 16px #d94b2466}
+.ov{position:fixed;inset:0;background:#0009;z-index:50;display:none;align-items:flex-end;justify-content:center}.ov.on{display:flex}
+.sheet{width:100%;max-width:560px;max-height:92vh;overflow:auto;border-radius:28px 28px 0 0;background:var(--bg);padding:18px;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+.sheet.dk{background:#161616;color:#f6e9de;--card:#242424;--mut:#aaa;--bg2:#2a2a2a}
+.pim{height:240px;border-radius:22px;background:center/cover;margin-bottom:14px}
+.opt{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.opt button{padding:8px 16px;border-radius:99px;background:var(--bg2);border:1px solid transparent}.opt button.on{background:var(--ac);color:#fff}
+label{display:block;font-size:13px;font-weight:500;margin:10px 0 4px}
+input,select,textarea{width:100%;padding:11px 14px;border-radius:14px;border:1px solid #c9b3a6;background:var(--card);color:inherit;font:inherit}
+.q{display:flex;align-items:center;gap:12px}.q button{width:38px;height:38px;border-radius:50%;background:var(--bg2);font-size:20px}
+.ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--bg2)}.ci .t{width:56px;height:56px;border-radius:14px;background:center/cover;flex:none}.ci>div{flex:1;font-size:13px}
+.pg{display:none;padding-top:8px}.pg.on{display:block}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl td,.tbl th{padding:8px;border-bottom:1px solid var(--bg2);text-align:left;vertical-align:middle}
+.gal{columns:2;gap:12px}.gal img{width:100%;border-radius:18px;margin-bottom:12px;display:block}
+.err{color:#c0301a;font-size:12px}.sm{font-size:12px;color:var(--mut)}
+@media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}.gal{columns:3}.desk{display:flex}.hero{height:360px}.slide h2{font-size:40px}.ov{align-items:center}.sheet{border-radius:28px}.hello h1{font-size:40px}.row .pc{width:210px}.pc .im{height:160px}}
+</style></head><body>
+<header><div class="wrap"><div class="top">
+<button class="ic" id="mnu" aria-label="Menu">☰</button>
+<a class="logo" href="#home" aria-label="Soft Cravings home"><img src="images/logo.png" alt="Soft Cravings — Because life tastes better soft"></a>
+<nav class="desk" aria-label="Main"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#special">Special Orders</a><a href="#gallery">Gallery</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<button class="ic" id="thm" aria-label="Toggle dark mode">◐</button>
+<button class="ic" aria-label="Notifications" onclick="toast('No new notifications')">🔔</button>
+<button class="ic" id="cb" aria-label="Open cart">🛍<span class="bd" id="cn">0</span></button></div>
+<div class="search"><input id="q" type="search" autocomplete="off" placeholder="Search cakes, pastries, small chops…" aria-label="Search"><div class="sg" id="sg" role="listbox"></div></div></div></header>
+<main class="wrap">
+<section class="pg" id="p-home"><div class="hello"><p style="margin:0">Hello, Sweet Tooth! 👋</p><h1>Sweet Moments. Delicious Memories.</h1><p>Freshly baked goodness, beautiful creations and irresistible treats made just for you.</p></div>
+<div class="hero" id="hero"></div>
+<div class="cats" id="cats1"></div>
+<div class="notice" id="ntc"></div>
+<div class="sec"><h2>Popular Treats</h2><a href="#menu">View All →</a></div><div class="row" id="pop"></div>
+<div class="promo"><div><span class="tag">SPECIAL OCCASIONS</span><h2>Make Every Celebration Sweeter.</h2><a class="btn" href="#special">Place Your Order →</a></div><div class="pi" id="pimg"></div></div></section>
+<section class="pg" id="p-menu"><div class="sec"><h2>Our Menu</h2><span class="sm" id="cnt"></span></div><div class="cats" id="cats2"></div><div class="grid" id="mg"></div></section>
+<section class="pg" id="p-special"><div class="sec"><h2>Special Orders</h2></div><div class="notice">Every occasion is different. Tell us what you have in mind, and we’ll work with you to create something special.</div>
+<form class="card" id="sf" style="padding:18px" novalidate>
+<label>Your name</label><input name="name" required><label>Phone number</label><input name="phone" type="tel" required placeholder="080…">
+<label>Type of occasion</label><select name="occ"><option>Birthday</option><option>Wedding</option><option>Anniversary</option><option>Party</option><option>Corporate event</option><option>Family celebration</option><option>Other</option></select>
+<label>Preferred delivery / event date</label><input name="date" type="date" required>
+<label>Number of guests / estimated quantity</label><input name="qty" required>
+<label>Product category</label><select name="cat"><option>Cakes</option><option>Pastries</option><option>Small Chops</option><option>Cupcakes</option><option>Desserts</option><option>Mixed</option></select>
+<label>Cake size, flavour or design</label><textarea name="design" rows="3"></textarea>
+<label>Budget range (optional)</label><input name="budget" placeholder="e.g. ₦30,000 – ₦50,000">
+<label>Reference image (optional)</label><input name="ref" type="file" accept="image/*"><div class="sm">For image references, attach the photo in WhatsApp after the message opens.</div>
+<label>Additional instructions</label><textarea name="notes" rows="2"></textarea>
+<p class="err" id="se"></p><button class="btn" type="submit">Send Request on WhatsApp</button>
+<p class="sm">Special orders are reviewed and only confirmed once Soft Cravings replies to you.</p></form></section>
+<section class="pg" id="p-offers"><div class="sec"><h2>Offers &amp; Packages</h2></div><div id="offers"></div></section>
+<section class="pg" id="p-orders"><div class="sec"><h2>My Orders</h2></div><div id="mo"></div><p class="sm">Orders are saved on this device. Status updates come to you on WhatsApp.</p></section>
+<section class="pg" id="p-gallery"><div class="sec"><h2>Gallery</h2></div><div class="gal" id="gal"></div></section>
+<section class="pg" id="p-about"><div class="sec"><h2>About Soft Cravings</h2></div><div class="card" style="padding:20px"><div class="ceo"><img src="images/ceo.jpg" alt="Theodore Thomas Ngbrenche, CEO of Soft Cravings"><div><h3>Theodore Thomas Ngbrenche</h3><span class="sm">CEO, Soft Cravings</span></div></div><div class="pim" id="aimg"></div><p>Soft Cravings began with a simple belief: a good bite can change your whole day. We bake celebration cakes, golden meat pies, crisp fish rolls, cupcakes and small chops boxes, all made fresh and finished with care.</p><p>From a quiet Friday treat to a wedding or corporate event, every order is baked to be beautiful and delicious. <b>Because life tastes better soft.</b></p></div></section>
+<section class="pg" id="p-contact"><div class="sec"><h2>Contact</h2></div><div class="card" style="padding:20px"><p><b>WhatsApp / Phone:</b> <a href="https://wa.me/2348109237627" style="color:var(--ac)">0810 923 7627</a></p><p id="pk" class="sm"></p><a class="btn" href="https://wa.me/2348109237627" target="_blank" rel="noopener">Chat on WhatsApp</a></div></section>
+</main>
+<footer class="wrap sm" style="padding:24px 16px;text-align:center">© SOFT CRAVINGS — Every Bite, A Little Happiness.</footer>
+<nav class="bot" aria-label="Mobile"><a href="#home" data-r="home"><b>⌂</b>Home</a><a href="#menu" data-r="menu"><b>▦</b>Menu</a><a href="#special" data-r="special" class="mid"><b>✎</b>Order</a><a href="#offers" data-r="offers"><b>%</b>Offers</a><a href="#orders" data-r="orders"><b>☺</b>Profile</a></nav>
+<div class="ov" id="ov"><div class="sheet" id="sh"></div></div>
+<div id="tst" style="position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:#38251F;color:#fff;padding:10px 18px;border-radius:99px;z-index:90;display:none"></div>
+<script>
+/* ===== EDIT YOUR MENU BELOW: products (DEF) and settings (SETD) ===== */
+const IMG={"cakeslice": "images/cakeslice.jpg", "pies": "images/pies.jpg", "piecut": "images/piecut.jpg", "pink": "images/pink.jpg", "chops1": "images/chops1.jpg", "chops2": "images/chops2.jpg", "pies2": "images/pies2.jpg", "bluecake2": "images/bluecake2.jpg", "bluecake3": "images/bluecake3.jpg", "choccup": "images/choccup.jpg", "rolls": "images/rolls.jpg", "rollcut": "images/rollcut.jpg", "bluecake": "images/bluecake.jpg", "rolls2": "images/rolls2.jpg", "purple": "images/purple.jpg", "box": "images/box.jpg", "pies3": "images/pies3.jpg", "rollcut2": "images/rollcut2.jpg"};
+const WA='2348109237627',N=n=>'₦'+Number(n||0).toLocaleString('en-NG');
+const CATS=[['All Items','🍰','cakeslice'],['Cakes','🎂','bluecake'],['Pastries','🥧','pies'],['Small Chops','🍢','chops2'],['Cupcakes','🧁','purple'],['Desserts','🍫','cakeslice'],['Special Orders','🎉','box']];
+const CS=['Vanilla','Chocolate','Red Velvet','Strawberry','Marble'];
+const DEF=[
+{id:'p1',name:'Celebration Birthday Cake',desc:'Soft sponge, silky buttercream, gold finishing touches.',price:25000,cat:'Cakes',img:'bluecake',cake:1,pop:1,tag:'BESTSELLER',sizes:['6 inch','8 inch','10 inch']},
+{id:'p2',name:'Chocolate Layer Cake',desc:'Rich, moist chocolate layers with creamy filling.',price:20000,cat:'Cakes',img:'cakeslice',cake:1,pop:1,sizes:['6 inch','8 inch','10 inch']},
+{id:'p3',name:'Golden Meat Pie',desc:'Flaky crust packed with seasoned meat and vegetables.',price:1500,cat:'Pastries',img:'pies',pop:1,tag:'POPULAR',sizes:[]},
+{id:'p4',name:'Crispy Fish Roll',desc:'Soft golden dough rolled around spiced fish filling.',price:1000,cat:'Small Chops',img:'rolls',pop:1,sizes:[]},
+{id:'p5',name:'Small Chops Box',desc:'Puff puff, pie, cupcake, cookies and a chilled drink.',price:6500,cat:'Small Chops',img:'chops2',pop:1,tag:'SAVE',sizes:[]},
+{id:'p6',name:'Rose Cupcakes (Box of 6)',desc:'Buttercream roses on vanilla cupcakes, topped to order.',price:7000,cat:'Cupcakes',img:'pink',pop:1,sizes:['Box of 6','Box of 12']},
+{id:'p7',name:'Chocolate Cupcakes (Box of 6)',desc:'Velvety chocolate swirls on soft cupcakes.',price:7000,cat:'Cupcakes',img:'choccup',sizes:['Box of 6','Box of 12']},
+{id:'p8',name:'Berry Rose Cupcake',desc:'Deep berry buttercream rose with gold pearls.',price:1500,cat:'Desserts',img:'purple',sizes:[]},
+{id:'p9',name:'Pie &amp; Roll Combo Box',desc:'Meat pies and fish rolls packed fresh in a box.',price:5000,cat:'Pastries',img:'box',sizes:[]}];
+const SETD={deadline:'Thursday, 6:00 PM',fee:0,pickup:'Pickup location is shared on WhatsApp once your order is confirmed.',insta:'',promos:[{t:'Celebration Packages',d:'Cakes, cupcakes and small chops bundled for your event. Message us for a quote.',img:'bluecake3'},{t:'Friday Treat Box',d:'Our Small Chops Box is freshly packed for Friday pickup and delivery.',img:'chops1'}]};
+let P=DEF.slice(),S=Object.assign({},SETD),cart=ld('sc_cart',[]),ord=ld('sc_ord',[]),fav=ld('sc_fav',[]),cat='All Items',db=null,usr=null;
+function ld(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+const $=s=>document.querySelector(s),E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const im=k=>IMG[k]||k||'';
+function toast(m){const t=$('#tst');t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',2200)}
+function nextFri(){const d=new Date();d.setDate(d.getDate()+((5-d.getDay()+7)%7||7));return d.toLocaleDateString('en-NG',{weekday:'long',day:'numeric',month:'long'})}
+function card(p){return `<div class="card pc"><div class="im" style="background-image:url('${im(p.img)}')" onclick="show('${p.id}')" role="button" tabindex="0" aria-label="${E(p.name)}"></div>${p.tag?`<span class="lb">${E(p.tag)}</span>`:''}<button class="hb" aria-label="Favourite" onclick="fv('${p.id}')">${fav.includes(p.id)?'♥':'♡'}</button><div class="b"><h3>${p.name}</h3><p>${E(p.desc)}</p><div class="f"><span>${N(p.price)}</span><button class="add" aria-label="Add" onclick="show('${p.id}')">+</button></div></div></div>`}
+function fv(id){fav=fav.includes(id)?fav.filter(x=>x!=id):[...fav,id];sv('sc_fav',fav);render()}
+function catsH(){return CATS.map(c=>`<button class="cat ${cat==c[0]?'on':''}" onclick="setCat('${c[0]}')"><span style="background-image:url('${im(c[2])}')"></span>${c[0]}</button>`).join('')}
+function setCat(c){cat=c;if(c=='Special Orders'){location.hash='special';return}if(location.hash!='#menu'&&location.hash!='#home'&&location.hash!='')location.hash='menu';render()}
+function list(){const q=$('#q').value.trim().toLowerCase();return P.filter(p=>(cat=='All Items'||p.cat==cat)&&(!q||(p.name+p.desc+p.cat).toLowerCase().includes(q)))}
+let si=0,st;function hero(){const S2=[['Birthday Cakes','Crave the Soft Perfection!','bluecake3'],['Golden Pastries','Fresh From Our Oven','pies3'],['Small Chops','Perfect for Every Party','chops1'],['Cupcakes','Little Roses of Joy','pink']];
+$('#hero').innerHTML=S2.map((s,i)=>`<div class="slide ${i==si?'on':''}" style="background-image:url('${im(s[2])}')"><div><span class="tag">${s[0].toUpperCase()}</span><h2>${s[1]}</h2><a class="btn" href="#menu">Explore Our Menu →</a></div></div>`).join('')+`<div class="dots">${S2.map((s,i)=>`<i class="${i==si?'on':''}"></i>`).join('')}</div>`;clearTimeout(st);st=setTimeout(()=>{si=(si+1)%4;if(route()=='home')hero()},4500)}
+function render(){$('#cats1').innerHTML=$('#cats2').innerHTML=catsH();const l=list();$('#mg').innerHTML=l.map(card).join('')||'<p>No treats found.</p>';$('#cnt').textContent=l.length+' items';
+$('#pop').innerHTML=P.filter(p=>p.pop).map(card).join('');
+$('#ntc').innerHTML=`<b>Regular Orders:</b> Pickup and delivery are available on Fridays (next: ${nextFri()}). Order by <b>${E(S.deadline)}</b>.`;
+$('#pimg').style.backgroundImage=`url('${im('bluecake')}')`;$('#aimg').style.backgroundImage=`url('${im('box')}')`;
+$('#pk').textContent=S.pickup+(S.insta?' Instagram: '+S.insta:'');
+$('#offers').innerHTML=S.promos.map(o=>`<div class="promo card" style="margin-bottom:14px"><div><span class="tag">OFFER</span><h2>${E(o.t)}</h2><p>${E(o.d)}</p><a class="btn" href="#special">Order Now →</a></div><div class="pi" style="background-image:url('${im(o.img)}')"></div></div>`).join('');
+$('#gal').innerHTML=Object.keys(IMG).map(k=>`<img loading="lazy" alt="Soft Cravings ${k}" src="${IMG[k]}">`).join('');
+$('#cn').textContent=cart.reduce((a,c)=>a+c.q,0);
+$('#mo').innerHTML=ord.length?ord.map(o=>`<div class="card" style="padding:14px;margin-bottom:12px"><b>#${o.id}</b> · ${o.date}<br><span class="sm">${E(o.items)}</span><br>Total ${N(o.total)} · ${o.mode} · <span class="tag" style="background:var(--bl);color:#38251F">${o.status}</span></div>`).join(''):'<p>No orders yet. Your orders will appear here.</p>'}
+function route(){return (location.hash.slice(1)||'home')}
+function nav(){const r=route();document.querySelectorAll('.pg').forEach(e=>e.classList.toggle('on',e.id=='p-'+r));if(!$('#p-'+r)){$('#p-home').classList.add('on')}
+document.querySelectorAll('nav.bot a').forEach(a=>a.classList.toggle('on',a.dataset.r==r));if(r=='home')hero();window.scrollTo(0,0)}
+function open_(h,dk){$('#sh').className='sheet'+(dk?' dk':'');$('#sh').innerHTML=h;$('#ov').classList.add('on')}
+function close_(){$('#ov').classList.remove('on')}
+$('#ov').onclick=e=>{if(e.target.id=='ov')close_()};
+let cur,sel;
+function show(id){cur=P.find(p=>p.id==id);sel={q:1,size:cur.sizes[0]||'',fl:CS[0],col:'',ice:'Buttercream',msg:'',deco:'',note:''};pd()}
+function pd(){const p=cur;open_(`<div class="pim" style="background-image:url('${im(p.img)}')"></div><div style="display:flex;justify-content:space-between;gap:10px"><h2 style="font-size:24px">${p.name}</h2><b style="color:#ff8a4d;font-size:20px">${N(p.price)}</b></div><p class="sm">${E(p.desc)}</p>
+${p.sizes.length?`<label>Size</label><div class="opt">${p.sizes.map(s=>`<button class="${sel.size==s?'on':''}" onclick="sel.size='${s}';pd()">${s}</button>`).join('')}</div>`:''}
+${p.cake?`<label>Flavour</label><div class="opt">${CS.map(s=>`<button class="${sel.fl==s?'on':''}" onclick="sel.fl='${s}';pd()">${s}</button>`).join('')}</div><label>Colour theme</label><input id="o-col" value="${E(sel.col)}" placeholder="e.g. blue and gold"><label>Icing preference</label><select id="o-ice">${['Buttercream','Whipped cream','Cream cheese'].map(x=>`<option ${sel.ice==x?'selected':''}>${x}</option>`).join('')}</select><label>Custom message on cake</label><input id="o-msg" value="${E(sel.msg)}" placeholder="Happy Birthday…"><label>Additional decoration requests</label><input id="o-deco" value="${E(sel.deco)}">`:''}
+<label>Special instructions</label><textarea id="o-note" rows="2">${E(sel.note)}</textarea>
+<div style="display:flex;gap:14px;align-items:center;margin-top:16px"><div class="q"><button onclick="rd();sel.q=Math.max(1,sel.q-1);pd()" aria-label="Less">−</button><b>${sel.q}</b><button onclick="rd();sel.q++;pd()" aria-label="More">+</button></div><button class="btn" style="flex:1;justify-content:center;font-size:16px" onclick="addC()">Add to Cart · ${N(p.price*sel.q)}</button></div>`,1)}
+function rd(){const g=i=>$('#'+i)?$('#'+i).value:'';if($('#o-note')){sel.note=g('o-note');sel.col=g('o-col');sel.ice=g('o-ice')||sel.ice;sel.msg=g('o-msg');sel.deco=g('o-deco')}}
+function addC(){rd();const p=cur,d=[sel.size,p.cake&&sel.fl,p.cake&&sel.col&&('Colour: '+sel.col),p.cake&&sel.ice,p.cake&&sel.msg&&('Message: “'+sel.msg+'”'),sel.deco&&('Deco: '+sel.deco),sel.note&&('Note: '+sel.note)].filter(Boolean).join(' · ');
+const k=p.id+d,x=cart.find(c=>c.k==k);x?x.q+=sel.q:cart.push({k,id:p.id,name:p.name.replace('&amp;','&'),price:p.price,img:p.img,d,q:sel.q});sv('sc_cart',cart);render();close_();toast('Added to cart')}
+function cartV(){const sub=cart.reduce((a,c)=>a+c.price*c.q,0);open_(`<h2>Your Cart</h2>${cart.length?cart.map((c,i)=>`<div class="ci"><div class="t" style="background-image:url('${im(c.img)}')"></div><div><b>${E(c.name)}</b><br><span class="sm">${E(c.d)}</span><br>${N(c.price)}</div><div class="q"><button onclick="cq(${i},-1)">−</button><b>${c.q}</b><button onclick="cq(${i},1)">+</button></div></div>`).join('')+`<p style="display:flex;justify-content:space-between"><span>Subtotal</span><b>${N(sub)}</b></p><button class="btn" style="width:100%;justify-content:center" onclick="co()">Checkout</button>`:'<p>Your cart is empty.</p>'}`)}
+function cq(i,d){cart[i].q+=d;if(cart[i].q<1)cart.splice(i,1);sv('sc_cart',cart);render();cartV()}
+function co(){const sub=cart.reduce((a,c)=>a+c.price*c.q,0);open_(`<h2>Checkout</h2><div class="notice">Regular Orders: Pickup and delivery are available on Fridays. Order by ${E(S.deadline)}.</div><label>Name</label><input id="c-n"><label>Phone number</label><input id="c-p" type="tel"><label>Pickup or delivery</label><select id="c-m" onchange="$('#c-a').style.display=this.value=='Delivery'?'block':'none'"><option>Pickup</option><option>Delivery</option></select><div id="c-a" style="display:none"><label>Delivery address</label><textarea id="c-ad" rows="2"></textarea></div><p class="sm">${E(S.pickup)}</p><p style="display:flex;justify-content:space-between"><span>Subtotal</span><b>${N(sub)}</b></p>${S.fee?`<p class="sm">Delivery charge (if delivery): ${N(S.fee)}</p>`:''}<p class="err" id="c-e"></p><button class="btn" style="width:100%;justify-content:center" onclick="send()">Send Order on WhatsApp</button><p class="sm">No payment is taken on this site. Payment is arranged on WhatsApp after confirmation.</p>`)}
+function send(){const n=$('#c-n').value.trim(),p=$('#c-p').value.trim(),m=$('#c-m').value,a=$('#c-ad').value.trim();if(n.length<2||!/^[+\d][\d\s-]{7,}$/.test(p)||(m=='Delivery'&&a.length<5)){$('#c-e').textContent='Please enter your name, a valid phone number'+(m=='Delivery'?' and delivery address.':'.');return}
+const sub=cart.reduce((a,c)=>a+c.price*c.q,0),fee=m=='Delivery'?+S.fee||0:0,tot=sub+fee,id=Date.now().toString().slice(-6);
+const items=cart.map(c=>c.q+'× '+c.name+(c.d?' ('+c.d+')':'')).join('; ');
+const msg=`*New Order #${id} — SOFT CRAVINGS*\n\n${cart.map(c=>`• ${c.q}× ${c.name} — ${N(c.price*c.q)}${c.d?'\n   '+c.d:''}`).join('\n')}\n\nSubtotal: ${N(sub)}${fee?'\nDelivery: '+N(fee):''}\n*Total: ${N(tot)}*\n\nName: ${n}\nPhone: ${p}\n${m}${a?': '+a:''}\nFor: Friday ${nextFri()}`;
+const o={id,date:new Date().toLocaleDateString('en-NG'),items,total:tot,mode:m,status:'Sent — awaiting confirmation',name:n,phone:p};ord.unshift(o);sv('sc_ord',ord);logDb(o);cart=[];sv('sc_cart',cart);render();close_();
+open_(`<h2>Order ready to send 🎉</h2><p>Tap below to send order #${id} on WhatsApp. It is only confirmed when Soft Cravings replies.</p><a class="btn" href="https://wa.me/${WA}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener" onclick="setTimeout(close_,300)">Open WhatsApp</a>`)}
+async function logDb(o){try{}catch(e){}}
+$('#sf').onsubmit=e=>{e.preventDefault();const f=e.target,v=n=>f[n].value.trim();if(v('name').length<2||!/^[+\d][\d\s-]{7,}$/.test(v('phone'))||!v('date')||!v('qty')){$('#se').textContent='Please fill in name, valid phone, date and quantity.';return}$('#se').textContent='';
+const msg=`*Special Order Request — SOFT CRAVINGS*\n\nName: ${v('name')}\nPhone: ${v('phone')}\nOccasion: ${v('occ')}\nDate: ${v('date')}\nGuests/Qty: ${v('qty')}\nCategory: ${v('cat')}\nDesign: ${v('design')||'-'}\nBudget: ${v('budget')||'-'}\nNotes: ${v('notes')||'-'}${f.ref.files.length?'\n(Reference image to follow)':''}`;
+const o={id:Date.now().toString().slice(-6),date:new Date().toLocaleDateString('en-NG'),items:'Special order: '+v('occ')+' ('+v('cat')+')',total:0,mode:'Special request',status:'Pending review',name:v('name'),phone:v('phone')};ord.unshift(o);sv('sc_ord',ord);logDb(o);render();window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');toast('Request opened in WhatsApp')};
+/* init */
+$('#mnu').onclick=()=>open_(`<h2>Menu</h2>${['home','menu','special','gallery','about','contact','offers','orders'].map(r=>`<p><a href="#${r}" onclick="close_()" style="color:inherit;font-size:18px;text-decoration:none;text-transform:capitalize">${r=='special'?'Special Orders':r}</a></p>`).join('')}`);
+$('#cb').onclick=cartV;
+function sg(){const q=$('#q').value.trim().toLowerCase(),cs=CATS.slice(1,6).filter(c=>!q||c[0].toLowerCase().includes(q)),ps=P.filter(p=>!q||(p.name+' '+p.desc+' '+p.cat).toLowerCase().includes(q)).slice(0,q?6:4);let h='';
+if(cs.length)h+='<div class="sm">Categories</div><div class="chips">'+cs.map(c=>`<button class="chip" onclick="sgc('${c[0]}')">${c[1]} ${c[0]}</button>`).join('')+'</div>';
+if(ps.length)h+='<div class="sm">'+(q?'Results':'Popular')+'</div>'+ps.map(p=>`<button class="it" onclick="sgp('${p.id}')"><span class="t" style="background-image:url('${im(p.img)}')"></span><span>${p.name}<br><span class="sm">${N(p.price)}</span></span></button>`).join('');
+if(!cs.length&&!ps.length)h='<p class="sm">No treats found for “'+E(q)+'”. Try cake, pie or cupcake.</p>';
+$('#sg').innerHTML=h;$('#sg').classList.add('on')}
+function sgx(){$('#sg').classList.remove('on')}
+function sgc(c){cat=c;$('#q').value='';sgx();location.hash='menu';render()}
+function sgp(id){sgx();show(id)}
+$('#q').oninput=()=>{sg();if(route()=='menu')render()};$('#q').onfocus=sg;
+$('#q').onkeydown=e=>{if(e.key=='Enter'){e.preventDefault();if($('#q').value.trim())cat='All Items';sgx();$('#q').blur();location.hash='menu';render()}if(e.key=='Escape')sgx()};
+document.addEventListener('click',e=>{if(!e.target.closest('.search'))sgx()});
+$('#thm').onclick=()=>{const d=document.documentElement,dk=getComputedStyle(d).colorScheme=='dark';d.dataset.theme=dk?'light':'dark'};
+window.onhashchange=nav;render();nav();
+
+</script></body></html>
